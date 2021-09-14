@@ -1,2 +1,0 @@
-# VinayakRoy
-Read it.
