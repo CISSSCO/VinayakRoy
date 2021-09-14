@@ -1,0 +1,115 @@
+#+TITLE: Things to remember
+#+Author: Cisco Ramon
+#+Date: <2021-09-15 Wed>
+
+** TABLE OF CONTENT :toc:
+  - [[#git][Git]]
+  - [[#github][Github]]
+  - [[#similar-plateform-like-github][Similar plateform like Github]]
+  - [[#steps-to-create-or-upload-files-to-the-repository][Steps to create or upload files to the repository]]
+  - [[#commands-to-work-on-git-or-to-upload-files-or-changes-to-github][Commands to work on git or to upload files or changes to github]]
+  - [[#some-popular-linux-commands-used-while-working-with-git][Some popular linux commands used while working with git]]
+
+** Git
+Git is a version control system.
+It is used to manupulate and track changes to the files.
+
+
+** Github
+It is a plateform where we can host our code.
+It is mostly used for colaborating in a project or code with the community, like open source project.
+We create repository here and host all the source code and files in the repo, and track the history of the
+code so that we can see the changes made at a particular time.
+
+
+** Similar plateform like Github
+Gitlab, Bitbucket
+
+
+** Steps to create or upload files to the repository
+ - Go to github
+ - Sign in with your account
+ - Click on add button and create a repository
+ - After created clone the repository by copying the link available on the repo
+ - Now you can clone the repo to your local machine
+ - After cloning a folder is created similar to the name of the repo
+ - Now you can go inside the folder and create the files or add or remove or perform any operation you want
+   with your folder
+ - After all those operation if you want to upload your files to the repo
+   you have to perform certain task using git commans given on next section
+
+
+** Commands to work on git or to upload files or changes to github
+
+#+BEGIN_SRC bash
+
+//to check the status of a repo, you can use this anytime
+git status
+
+//to add the changes made to the files or to stage changes to the files
+git add <filename>
+or
+git add .       //'.' is used to add or stage all the changes made to the folder to git
+
+//now you have to commit the changes to the repo
+git commit -m "your message"    //-m is used to add message
+//if you do not use -m to git commit then your editor will open and you have to write the message manually there
+
+//now the final step
+git push
+or
+git push -o origin main
+//varify your identity if asked and you are good to go.
+
+#+END_SRC
+
+** Some popular linux commands used while working with git
+
+#+BEGIN_SRC bash
+
+#   line start with '#' is a commented line in a bash terminal or linux terminal
+#   /   - this symbol represent the root directory or main directory
+#   ~   - called 'tilde' which represent the home directory (/home/username)
+#   .   - called 'period' and represent the current working directory (means the directory in which you are currently present)
+#   ..  - represent the parent directory
+
+
+ls          #to list the files in a folder or directory
+
+ls -la      #list the files in a folder in detailed form(means with permissions, files-size and all other stuff)
+
+clear       #to clear the terminal
+
+echo hello  #to print anything to the terminal (in this case it will print hello to the terminal)
+
+exit        #to exit the terminal
+
+cd <foldername>     #to change the directory to the foldername
+
+cd /        #change to the root directory (main directory)
+
+cd ~        #changes to the home directory or the users directory
+
+cd          #changes to the home directory
+
+cd ..       #to change to the parent directory
+
+cd ../../../..      #change to parent 4 times
+
+mkdir <foldername>  #to create a folder with given foldername
+
+rmdir <foldername>  #remove folder having foldername (only remove when empty)
+
+rm -rf <filename or foldername>     #remove forcefully anything any file with filename or folder with foldername
+
+rm -rf /            #remove the whole operating system (you don't want to do this unless you are crazy)
+
+mv <foldername> <foldername1>   #rename a folder (you can also rename a file in the same manner just replace the foldername with your filename)
+
+mv  <filename>  <location>      #it will move your file to the given location
+#example -  mv /home/username/c/hello.c  /home/username/c/test/    #your file will move from c folder to test folder which is inside the c folder
+
+cp <filename> <location>        #works similar to mv but doesn't move your file, it will create a copy of the file to your location
+
+
+#+END_SRC
